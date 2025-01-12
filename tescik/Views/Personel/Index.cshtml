@@ -2,25 +2,28 @@
     ViewData["Title"] = "View";
 }
 
-<h2>Lista sprzętów</h2>
+<h2>Lista personelu</h2>
 
-<a asp-action="Create" class="btn btn-primary">Dodaj nowy sprzęt</a>
+<a asp-action="Create" class="btn btn-primary">Dodaj personel</a>
 <table class="table">
     <thead>
         <tr>
-            <th>Nazwa Sprzętu</th>
-            <th>Magazyn</th>
-            <th>Data Wstawienia</th>
-            <th>Akcje</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Wiek</th>
+            <th>Stopień</th>
+            <th>Przynależność do magazynu</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.NazwaSprzetu</td>
-                <td>@item.NazwaMagazynu</td>
-                <td>@item.DataWstawienia.ToString("yyyy-MM-dd")</td>
+                <td>@item.Imie</td>
+                <td>@item.Nazwisko</td>
+                <td>@item.Wiek</td>
+                <td>@item.Stopien</td>
+                <td>@item.PrzynaleznoscDoMagazynu</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edytuj</a>
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Usuń</a>
