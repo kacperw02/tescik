@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using tescik.Models;
+using Projekt_bazy.Models;
 
-namespace tescik.Controllers
+namespace Projekt_bazy.Controllers
 {
     public class HomeController : Controller
     {

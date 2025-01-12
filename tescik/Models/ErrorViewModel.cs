@@ -1,4 +1,4 @@
-namespace tescik.Models
+namespace Projekt_bazy.Models
 {
     public class ErrorViewModel
     {

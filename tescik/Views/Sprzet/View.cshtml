@@ -1,0 +1,39 @@
+﻿@model Projekt_bazy.Models.Sprzet
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sprzet</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaSprzetu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaSprzetu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaMagazynu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaMagazynu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataWstawienia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataWstawienia)
+        </dd>
+    </dl>
+    
+    <form asp-action="View">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
